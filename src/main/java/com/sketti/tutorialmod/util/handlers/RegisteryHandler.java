@@ -1,8 +1,10 @@
 package com.sketti.tutorialmod.util.handlers;
 
+import com.sketti.tutorialmod.init.ModBlocks;
 import com.sketti.tutorialmod.init.ModItems;
 import com.sketti.tutorialmod.util.IHasModel;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -19,6 +21,12 @@ public class RegisteryHandler
 	}
 	
 	@SubscribeEvent 
+	public static void onBlockegister(RegistryEvent.Register<Block> event)
+	{
+		event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
+	}
+	
+	@SubscribeEvent 
 	public static void onModelRegister(ModelRegistryEvent event)
 	{
 		for (Item item: ModItems.ITEMS)
@@ -26,6 +34,13 @@ public class RegisteryHandler
 			if (item instanceof IHasModel)
 			{
 				((IHasModel)item).registerModels();
+			}
+		}
+		for (Block block: ModBlocks.BLOCKS)
+		{
+			if (block instanceof IHasModel)
+			{
+				((IHasModel)block).registerModels();
 			}
 		}
 	}
