@@ -1,4 +1,5 @@
 package com.sketti.tutorialmod;
+import com.sketti.tutorialmod.init.ModRecipes;
 import com.sketti.tutorialmod.proxy.CommonProxy;
 import com.sketti.tutorialmod.util.Reference;
 
@@ -29,6 +30,8 @@ public class Main
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
+		ModRecipes.init();
+		
 		
 	}
 	
