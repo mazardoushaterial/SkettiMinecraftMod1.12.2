@@ -6,3 +6,9 @@ tile.ruby_block.name=Block of Ruby
 
 //Tools
 item.ruby_sword.name=Ruby Sword
+
+//Armor
+item.ruby_helmet.name=Ruby Helmet
+item.ruby_chestplate.name=Ruby Chestplate
+item.ruby_leggings.name=Ruby Leggings
+item.ruby_boots.name=Ruby Boots
