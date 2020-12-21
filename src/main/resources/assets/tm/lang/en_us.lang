@@ -3,3 +3,6 @@ item.ruby.name=Ruby
 
 //Blocks
 tile.ruby_block.name=Block of Ruby
+
+//Tools
+item.ruby_sword.name=Ruby Sword
